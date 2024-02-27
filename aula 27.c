@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main(){
-	char nome {200};
+	char nome [200];
 	char sexo;
 	int idade;
 	float peso;
@@ -22,6 +22,8 @@ int main(){
 	
 	printf("digite seu peso: ");
 	scanf("%f",&peso);
+	
+	system("cls");
 	
 	printf("Seu nome:%s \n", nome);
 	printf("Seu Sexo: %c \n", sexo);
