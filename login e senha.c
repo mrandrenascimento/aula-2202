@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h> //Biblioteca
+//Bibliotecas
+#include <locale.h> 
+#include<string.h>
 void cabecalho(){
 	
 	setlocale(LC_ALL, "");
@@ -9,8 +11,8 @@ void cabecalho(){
 	fflush(stdin);
 }
 int main(){
-	char loginusuario[100]=1234; 
-	char senhausuario[100]=123456;
+	char loginusuario[100]="André"; 
+	char senhausuario[100]="123456";
 	char login[100], senha[100];
 	
 	cabecalho();
@@ -20,7 +22,9 @@ int main(){
 	scanf("%s",&senha);
 	
 	cabecalho();
-	if(login==loginusuario && senha==senhausuario){
+	//if(login==loginusuario && senha==senhausuario){
+	
+	if(strcmp (login,loginusuario)==0 && strcmp (senha, senhausuario)==0){
 		printf("\n\tBEM VINDO");
 	}else {
 		printf("\n\tLOGIN OU SENHA INVALIDOS");
