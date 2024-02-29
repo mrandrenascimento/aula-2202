@@ -9,15 +9,15 @@ void cabecalho(){
 	fflush(stdin);
 }
 int main(){
-	float loginusuario=1234; 
-	float senhausuario=123456;
-	float login, senha;
+	char loginusuario[100]=1234; 
+	char senhausuario[100]=123456;
+	char login[100], senha[100];
 	
 	cabecalho();
 	printf("Digite seu Login: ");
-	scanf("%f",&login);
+	scanf("%s",&login);
 	printf("Digite sua Senha: ");
-	scanf("%f",&senha);
+	scanf("%s",&senha);
 	
 	cabecalho();
 	if(login==loginusuario && senha==senhausuario){
