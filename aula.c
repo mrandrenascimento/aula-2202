@@ -1,15 +1,32 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <locale.h> //Bibliotecas
+#include<string.h>
+void cabecalho(){
+	
+	setlocale(LC_ALL, "");
+	system("cls\\clear");
+	printf("\n=== SENAI DENDEZEIRO ===\n");
+	fflush(stdin);
+}
+float  calcularMedia(float n1, float n2){
+	float media;
+	media= (n1+n2)/2;
+	return media;
+}
 int main(){
-	int idade = 10; //inteiro 
-	float peso = 80.550;//real
-	char sexo = 'f';//caracter=apenas uma letra ou caracter
-	char nome[200] = "marta";//cadeia= mais de uma letra ou caracter
+	float primeiroNumero, segundoNumero;
+	float media;
 	
-	printf("idade: %d \n",idade);//i=int
-	printf("peso: %f \n",peso);//f=float
-	printf("sexo: %c \n",sexo);//c= chat
-	printf("peso: %s \n",peso);//s= string (cedeia)
 	
-	return 0;
+	printf("Digite o Primeiro Número: ");
+	scanf("%f",&primeiroNumero);
+	
+	printf("Digite o Segundo numero: ");
+	scanf("%f",&segundoNumero);
+	
+	media=calcularMedia(primeiroNumero,segundoNumero);
+	
+	printf("\nMédia: %.2f",media);
+return 0;
 }
